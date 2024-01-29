@@ -3,3 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .skeleton {
+        @apply w-full animate-pulse list-none bg-gray-200;
+    }
+}
