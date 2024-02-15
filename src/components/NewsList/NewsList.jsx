@@ -4,8 +4,8 @@ const NewsList = ({ news }) => {
     return (
         <>
             <ul className="w-full flex flex-col gap-6">
-                {news.map((item) => {
-                    return <NewsItem key={item.id} item={item} />;
+                {news.map((item, index) => {
+                    if (index) return <NewsItem key={item.id} item={item} />;
                 })}
             </ul>
         </>
