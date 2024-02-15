@@ -5,7 +5,13 @@
 @tailwind utilities;
 
 @layer components {
-    .skeleton {
-        @apply w-full animate-pulse list-none bg-gray-200;
-    }
+  .skeleton {
+    @apply w-full animate-pulse list-none bg-gray-200;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
