@@ -1,8 +1,14 @@
-const Skeleton = ({ count = 1, type = "banner" }) => {
+const Skeleton = ({ count = 1, type = "banner", direction = "column" }) => {
   return (
     <>
       {count > 1 ? (
-        <ul className="flex flex-col gap-[12px]">
+        <ul
+          className={
+            direction === "column"
+              ? "flex flex-col gap-[12px] "
+              : "banners-list w-full gap-[12px]"
+          }
+        >
           {[...Array(count)].map((_, index) => {
             return (
               <li
