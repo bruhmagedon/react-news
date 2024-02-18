@@ -5,6 +5,7 @@ const BannersList = ({ banners }) => {
   return (
     <>
       <ul className="banners-list w-full gap-[12px] md:overflow-y-auto md:max-h-[1200px]">
+        {/* Не переходит к map, если banners - null/undefined */}
         {banners?.map((banner) => {
           return <NewsBanner key={banner.id} item={banner} />;
         })}
@@ -12,7 +13,7 @@ const BannersList = ({ banners }) => {
     </>
   );
 };
-
+// Обращаемся к HOOK (работает как обычные callbacks)
 const BannersListWithSkeleton = withSkeleton(BannersList, "banner", 10, "row");
 
 export default BannersListWithSkeleton;

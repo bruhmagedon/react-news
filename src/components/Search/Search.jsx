@@ -6,6 +6,7 @@ const Search = ({ keywords, setKeywords }) => {
           type="text"
           value={keywords}
           className="w-full py-[6px] px-[10px] border-[1px] border-[#f2f3f5] rounded-[12px]"
+          // управляемый инпут
           onChange={(e) => setKeywords(e.target.value)}
           placeholder="Поиск новости"
         />

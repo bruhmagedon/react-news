@@ -1,9 +1,10 @@
 import Skeleton from "../../components/Skeleton/Skeleton";
 
-// HOOK (функция высшего порядка)
+// HOС (компонент высшего порядка) / рендер пропсы
 // условно рендерим либо компонент либо скелетон
 // компонент может быть любым
 const withSkeleton = (Component, type, count, direction) => {
+  /*№Кейс - сделать унифицированный скелетон для разных компонентов */
   const WithSkeleton = (props) => {
     const { isLoading, ...restProps } = props;
 

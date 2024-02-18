@@ -1,4 +1,4 @@
-// сколько прошло с момент публикации до текущей даты
+// №Кейс - скрипт для определения сколько прошло с момент публикации до текущей даты
 export const formatTimeAgo = (dateString) => {
   const now = new Date();
   const date = new Date(dateString);

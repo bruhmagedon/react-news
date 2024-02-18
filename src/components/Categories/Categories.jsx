@@ -8,6 +8,7 @@ const Categories = forwardRef(
         ref={ref}
         className="flex w-full gap-[8px] items-start box-border overflow-x-auto whitespace-nowrap scrollbar-none"
       >
+        {/* Возможно можно и лучше сделать активность элемента через tailwind */}
         <button
           onClick={() => setSelectedCategory(null)}
           className={
@@ -37,7 +38,5 @@ const Categories = forwardRef(
     );
   }
 );
-
-Categories.displayName = "Categories";
 
 export default Categories;

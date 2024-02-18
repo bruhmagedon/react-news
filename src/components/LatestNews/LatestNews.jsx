@@ -9,6 +9,7 @@ const LatestNews = () => {
   return (
     <>
       <section className="flex flex-col w-full overflow-hidden gap-[32px]">
+        {/* №Кейс - проверка на сущетвование пропса*/}
         <BannersList banners={data && data.news} isLoading={isLoading} />
       </section>
     </>

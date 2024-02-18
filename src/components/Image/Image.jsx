@@ -1,7 +1,7 @@
 const Image = ({ image }) => {
   return (
     <>
-      {/* растягивающийся в пропорциях экран */}
+      {/* №Кейс - растягивающийся в пропорциях экран */}
       <div className="w-full h-auto relative pt-[80%] bg-[#f2f4f5]">
         {image ? (
           <img

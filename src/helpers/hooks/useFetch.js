@@ -5,7 +5,7 @@ export const useFetch = (fetchFunc, params) => {
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  // преобразуем объект параметров в строку чтобы избежать лишних ререндеров (из за объекта  params)
+  // №Кейс - преобразуем объект параметров в строку чтобы избежать лишних ререндеров (из за объекта  params)
   const stringParams = params ? new URLSearchParams(params).toString() : "";
 
   useEffect(() => {

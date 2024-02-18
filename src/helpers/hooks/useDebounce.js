@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// задержка рендера
+// №Кейс - задержка рендера
 export const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
 

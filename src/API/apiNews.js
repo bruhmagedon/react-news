@@ -1,5 +1,5 @@
 import axios from "axios";
-
+// Обращение к env
 const BASE_URL = import.meta.env.VITE_NEWS_BASE_API_URL;
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
@@ -14,6 +14,7 @@ export const getNews = async ({
   try {
     const response = await axios.get(`${BASE_URL}search`, {
       params: {
+        // query параметры
         apiKey: API_KEY,
         page_number,
         page_size,
@@ -21,6 +22,7 @@ export const getNews = async ({
         keywords,
       },
     });
+    // axios возвращает не промис, а сразу json
     return response.data;
   } catch (error) {
     console.log(error);
