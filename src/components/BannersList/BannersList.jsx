@@ -4,7 +4,7 @@ import NewsBanner from "../NewsBanner/NewsBanner";
 const BannersList = ({ banners }) => {
   return (
     <>
-      <ul className="banners-list w-full gap-[12px] max-h-[1200px] overflow-y-auto">
+      <ul className="banners-list w-full gap-[12px] md:overflow-y-auto md:max-h-[1200px]">
         {banners?.map((banner) => {
           return <NewsBanner key={banner.id} item={banner} />;
         })}
