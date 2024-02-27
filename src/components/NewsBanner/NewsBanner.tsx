@@ -1,7 +1,12 @@
 import { formatTimeAgo } from "../../helpers/formateTimeAgo";
+import { INews } from "../../interfaces";
 import Image from "../Image/Image";
 
-const NewsBanner = ({ item }) => {
+interface IProps {
+  item: INews;
+}
+
+const NewsBanner = ({ item }: IProps) => {
   return (
     <>
       <div className="flex w-full flex-col gap-[12px]">

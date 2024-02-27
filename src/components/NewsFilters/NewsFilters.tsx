@@ -1,11 +1,19 @@
-import Categories from "../../components/Categories/Categories";
-import Search from "../../components/Search/Search";
+import Categories from "../Categories/Categories";
+import Search from "../Search/Search";
 import { useFetch } from "../../helpers/hooks/useFetch";
 import { getCategories } from "../../API/apiNews";
 import Slider from "../Slider/Slider";
+import { CategoriesApiResponse, IFilters } from "../../interfaces";
 
-const NewsFilters = ({ filters, changeFilter }) => {
-  const { data: dataCategories } = useFetch(getCategories);
+interface IProps {
+  filters: IFilters;
+  changeFilter: (key: string, value: string | number | null) => void;
+}
+
+const NewsFilters = ({ filters, changeFilter }: IProps) => {
+  const { data: dataCategories } = useFetch<CategoriesApiResponse, null>(
+    getCategories
+  );
   return (
     <>
       <div className="flex w-full gap-[12px] flex-col">

@@ -1,13 +1,12 @@
-import { formatDate } from "../../helpers/formateDate";
+import { IPaginationProps } from "../../interfaces";
 
-// Пагинация новостей (по 10 штук)
 const Pagination = ({
   totalPages,
   handleNextPage,
   handlePrevPage,
   handlePageClick,
   currentPage,
-}) => {
+}: IPaginationProps) => {
   const activePageStyles = "font-medium cursor-auto";
 
   return (
@@ -30,7 +29,6 @@ const Pagination = ({
                 onClick={() => handlePageClick(index + 1)}
                 className={
                   "p-[8px] border-none bg-white " +
-                  // активная страница
                   (activePage ? activePageStyles : "cursor-pointer")
                 }
                 key={index}
