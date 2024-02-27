@@ -1,4 +1,16 @@
-const Skeleton = ({ count = 1, type = "banner", direction = "column" }) => {
+import { DirectionType, SkeletonType } from "../../interfaces";
+
+interface IProps {
+  count?: number;
+  type?: SkeletonType;
+  direction?: DirectionType;
+}
+
+const Skeleton = ({
+  count = 1,
+  type = "banner",
+  direction = "column",
+}: IProps) => {
   return (
     <>
       {count > 1 ? (

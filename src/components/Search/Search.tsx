@@ -1,4 +1,9 @@
-const Search = ({ keywords, setKeywords }) => {
+interface IProps {
+  keywords: string;
+  setKeywords: (keywords: string) => void;
+}
+
+const Search = ({ keywords, setKeywords }: IProps) => {
   return (
     <>
       <div className="flex w-full bg-white gap-[12px]">

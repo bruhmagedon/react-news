@@ -1,4 +1,8 @@
-const Image = ({ image }) => {
+interface IProps {
+  image: string;
+}
+
+const Image = ({ image }: IProps) => {
   return (
     <>
       {/* растягивающийся в пропорциях экран */}

@@ -1,5 +1,11 @@
 import { formatTimeAgo } from "../../helpers/formateTimeAgo";
-const NewsItem = ({ item }) => {
+import { INews } from "../../interfaces";
+
+interface IProps {
+  item: INews;
+}
+
+const NewsItem = ({ item }: IProps) => {
   return (
     <>
       <li className="flex w-full flex-col gap-[12px]">

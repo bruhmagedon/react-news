@@ -1,8 +1,18 @@
-import { forwardRef } from "react";
+import { ForwardedRef, forwardRef } from "react";
+import { CategoriesType } from "../../interfaces";
+
+interface IProps {
+  categories: CategoriesType[];
+  setSelectedCategory: (category: CategoriesType | null) => void;
+  selectedCategory: CategoriesType | null;
+}
 
 /*№Кейс - обернуть компонет в forwardRef чтобы получить реф как пропсы */
 const Categories = forwardRef(
-  ({ categories, setSelectedCategory, selectedCategory }, ref) => {
+  (
+    { categories, setSelectedCategory, selectedCategory }: IProps,
+    ref: ForwardedRef<HTMLDivElement>
+  ) => {
     return (
       <div
         ref={ref}
