@@ -1,4 +1,4 @@
-import { DirectionType, SkeletonType } from "../../interfaces";
+import { DirectionType, SkeletonType } from "../../pages/interfaces";
 
 interface IProps {
   count?: number;

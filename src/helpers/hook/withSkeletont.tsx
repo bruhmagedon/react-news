@@ -1,5 +1,5 @@
 import Skeleton from "../../components/Skeleton/Skeleton";
-import { DirectionType, SkeletonType } from "../../interfaces";
+import { DirectionType, SkeletonType } from "../../pages/interfaces";
 
 interface IProps {
   isLoading: boolean;

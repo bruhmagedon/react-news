@@ -1,6 +1,6 @@
 import NewsItem from "../NewsItem/NewsItem";
 import withSkeleton from "../../helpers/hook/withSkeletont";
-import { INews } from "../../interfaces";
+import { INews } from "../../pages/interfaces";
 
 interface IProps {
   news?: INews[];

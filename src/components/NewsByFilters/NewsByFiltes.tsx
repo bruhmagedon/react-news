@@ -6,7 +6,7 @@ import { useFilters } from "../../helpers/hooks/useFilters";
 import NewsList from "../NewsList/NewsList";
 import NewsFilters from "../NewsFilters/NewsFilters";
 import PaginationWrapper from "../PaginationWrapper/PaginationWrapper";
-import { NewsApiResponse, ParamsType } from "../../interfaces";
+import { NewsApiResponse, ParamsType } from "../../pages/interfaces";
 
 // Новости по фильтрам + поиск + пагинация
 const NewsByFilters = () => {

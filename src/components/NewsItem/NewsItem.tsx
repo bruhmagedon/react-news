@@ -1,5 +1,5 @@
 import { formatTimeAgo } from "../../helpers/formateTimeAgo";
-import { INews } from "../../interfaces";
+import { INews } from "../../pages/interfaces";
 
 interface IProps {
   item: INews;

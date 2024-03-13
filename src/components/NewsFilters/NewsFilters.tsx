@@ -3,7 +3,7 @@ import Search from "../Search/Search";
 import { useFetch } from "../../helpers/hooks/useFetch";
 import { getCategories } from "../../API/apiNews";
 import Slider from "../Slider/Slider";
-import { CategoriesApiResponse, IFilters } from "../../interfaces";
+import { CategoriesApiResponse, IFilters } from "../../pages/interfaces";
 
 interface IProps {
   filters: IFilters;

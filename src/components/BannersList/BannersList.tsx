@@ -1,6 +1,6 @@
 import withSkeleton from "../../helpers/hook/withSkeletont";
 import NewsBanner from "../NewsBanner/NewsBanner";
-import { INews } from "../../interfaces";
+import { INews } from "../../pages/interfaces";
 
 interface IProps {
   banners?: INews[] | null;

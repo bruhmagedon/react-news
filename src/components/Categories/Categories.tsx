@@ -1,5 +1,5 @@
 import { ForwardedRef, forwardRef } from "react";
-import { CategoriesType } from "../../interfaces";
+import { CategoriesType } from "../../pages/interfaces";
 
 interface IProps {
   categories: CategoriesType[];

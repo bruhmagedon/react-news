@@ -1,6 +1,6 @@
 import { getLatestNews } from "../../API/apiNews";
 import { useFetch } from "../../helpers/hooks/useFetch";
-import { NewsApiResponse } from "../../interfaces";
+import { NewsApiResponse } from "../../pages/interfaces";
 import BannersList from "../BannersList/BannersList";
 
 const LatestNews = () => {
