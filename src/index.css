@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .skeleton {
+    @apply w-full animate-pulse list-none bg-gray-200;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .banners-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
