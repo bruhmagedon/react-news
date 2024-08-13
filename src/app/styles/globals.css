@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  @apply font-Segoe dark:bg-dark-theme transition-colors duration-150 ease-out;
+} */
+
+@layer base {
+  .base-layout {
+    @apply font-Segoe bg-light-theme dark:bg-dark-theme text-[#191919] transition-colors duration-150 ease-out dark:text-white;
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../shared/assets/fonts/SegoeUI.woff2');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../shared/assets/fonts/SegoeUI-Bold.woff2');
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../shared/assets/fonts/SegoeUI-SemiBold.woff2');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: 400;
+    src: url('../../shared/assets/fonts/SegoeUI-Italic.woff2');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: Segoe UI;
+    font-style: italic;
+    font-weight: 700;
+    src: url('../../shared/assets/fonts/SegoeUI-BoldItalic.woff2');
+  }
+}
+
+@layer components {
+  .skeleton {
+    @apply w-full animate-pulse list-none bg-gray-200;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .banners-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    .main {
+      grid-template-columns: 1fr;
+    }
+  }
+}
