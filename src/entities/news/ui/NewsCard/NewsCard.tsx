@@ -1,26 +1,23 @@
-import { formatTimeAgo } from "@/shared/utils/formateTimeAgo";
-import { INews } from "../..";
-import styles from "./styles.module.css";
-import Image from "@/shared/ui/Image/Image";
-import { ReactNode } from "react";
+import { formatTimeAgo } from '@/shared/utils/formatTimeAgo';
+import { INews } from '../..';
+import styles from './styles.module.css';
+import Image from '@/shared/ui/Image/Image';
+import { ReactNode } from 'react';
 
 interface Props {
   item: INews;
-  type: "banner" | "item";
+  type: 'banner' | 'item';
   viewNewsSlot?: (news: INews) => ReactNode;
 }
 
 // TODO Tailwind
-const NewsCard = ({ item, type = "item", viewNewsSlot }: Props) => {
+const NewsCard = ({ item, type = 'item', viewNewsSlot }: Props) => {
   return (
-    <li className={`${styles.card} ${type === "banner" && styles.banner}`}>
-      {type === "banner" ? (
+    <li className={`${styles.card} ${type === 'banner' && styles.banner}`}>
+      {type === 'banner' ? (
         <Image image={item?.image} />
       ) : (
-        <div
-          className={styles.wrapper}
-          style={{ backgroundImage: `url(${item.image})` }}
-        ></div>
+        <div className={styles.wrapper} style={{ backgroundImage: `url(${item.image})` }}></div>
       )}
 
       <div className={styles.info}>

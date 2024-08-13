@@ -1,7 +1,7 @@
-import { formatTimeAgo } from "@/shared/utils/formateTimeAgo";
-import { INews } from "../..";
-import styles from "./styles.module.css";
-import Image from "@/shared/ui/Image/Image";
+import { formatTimeAgo } from '@/shared/utils/formatTimeAgo';
+import { INews } from '../..';
+import styles from './styles.module.css';
+import Image from '@/shared/ui/Image/Image';
 
 interface Props {
   item: INews;
@@ -14,8 +14,8 @@ const NewsDetails = ({ item }: Props) => {
 
       <div className={styles.description}>
         <p>
-          {item.description} ({item.language}){" "}
-          <a target="_blank" href={item.url}>
+          {item.description} ({item.language}){' '}
+          <a target='_blank' href={item.url}>
             Read more...
           </a>
         </p>
