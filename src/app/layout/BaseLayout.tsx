@@ -1,5 +1,5 @@
 import { useTheme } from '@/app/providers/ThemeProvider';
-import { Header } from '@/widgets/header/ui';
+import { Header } from '@/widgets/header';
 import { Outlet } from 'react-router-dom';
 
 function BaseLayout() {

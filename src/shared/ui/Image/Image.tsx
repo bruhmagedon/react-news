@@ -1,17 +1,22 @@
+import news_plug from '@/shared/assets/News_Plug.jpg';
+import { cn } from '@/shared/utils/cn';
+
 interface IProps {
+  className?: string;
   image: string;
 }
 
-const Image = ({ image }: IProps) => {
+const Image = ({ image, className }: IProps) => {
   return (
     <>
       {/* растягивающийся в пропорциях экран */}
-      <div className="w-full h-auto relative pt-[80%] bg-[#f2f4f5]">
+      <div className={cn('', className)}>
         {image ? (
           <img
-            src={image}
-            alt="news"
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            src={image == 'None' ? news_plug : image}
+            alt='news'
+            className='absolute left-0 top-0 h-full w-full rounded-lg object-cover'
+            // className=''
           />
         ) : null}
       </div>

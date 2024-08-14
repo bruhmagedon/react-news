@@ -1,4 +1,4 @@
-import NewsFilters from "./ui/NewsFilters/NewsFilters";
-import NewsList from "./ui/NewsList/NewsList";
+import LatestNews from './ui/LatestNews/LatestNews';
+import NewsByFilters from './ui/NewsByFilters/NewsByFilters';
 
-export { NewsList, NewsFilters };
+export { LatestNews, NewsByFilters };
