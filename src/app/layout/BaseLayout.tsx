@@ -1,12 +1,12 @@
-import { useTheme } from '@/app/providers/ThemeProvider';
+import { Theme, useTheme } from '@/app/providers/ThemeProvider';
 import { Header } from '@/widgets/header';
 import { Outlet } from 'react-router-dom';
 
 function BaseLayout() {
-  const { isDark } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <div className={`base-layout ${isDark ? 'dark' : 'light'} `}>
+    <div className={`base-layout ${theme === Theme.DARK ? 'dark' : 'light'} `}>
       <Header />
       <div className='min-h-screen p-[20px]'>
         <Outlet />

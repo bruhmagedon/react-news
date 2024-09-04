@@ -9,23 +9,27 @@ interface Props {
 
 const NewsDetails = ({ item }: Props) => {
   return (
-    <div className={styles.details}>
+    <div className='grid grid-cols-[1fr_1fr] md:grid-cols-[1fr]'>
       <Image image={item.image} />
 
-      <div className={styles.description}>
+      <div className='text-xs text-[#6c7072]'>
         <p>
           {item.description} ({item.language}){' '}
           <a target='_blank' href={item.url}>
             Read more...
           </a>
         </p>
-        <p className={styles.extra}>
+        <p className='px-[20px] py-0 md:px-0 md:py-[20px]'>
           {formatTimeAgo(item.published)} by {item.author}
         </p>
 
         <ul>
           {item.category.map((category) => {
-            return <button className={styles.active}>{category}</button>;
+            return (
+              <button className='flex items-center rounded-[32px] border-[none] bg-[#e7e7ff] px-4 py-2 text-[#6b4eff]'>
+                {category}
+              </button>
+            );
           })}
         </ul>
       </div>

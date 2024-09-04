@@ -13,14 +13,12 @@ interface Props {
 }
 
 const NewsFilters = ({ filters, categories }: Props) => {
-  const { isDark } = useTheme();
-
   const dispatch = useAppDispatch();
 
   return (
     <div className='flex flex-col gap-[12px]'>
       {categories ? (
-        <Slider isDark={isDark}>
+        <Slider>
           <Categories
             categories={categories}
             selectedCategory={filters.category}
